@@ -50,6 +50,24 @@ python tests/run.py --source current --suite known --browser-only --browser-path
 python tests/run.py --source current --case listener_ws_sse --browser-path "<Chrome 可执行文件路径>"
 ```
 
+重定向链专项用例：
+
+```bash
+# 不需要浏览器的 CDP 事件回放
+PYTHONPATH=tests:. python tests/feature_cases/test_listener_redirect_chain.py
+
+# 真实 Chromium tab.listen / frame.listen 回归
+DRISSIONPAGE_BROWSER_PATH="<Chrome 可执行文件路径>" PYTHONPATH=tests:. \
+  python tests/regression_cases/test_listener_redirect_chain.py
+```
+
+也可在其余用例模块均可导入时通过 runner 运行：
+
+```bash
+python tests/runner.py --case feature_listener_redirect_chain --skip-browser --fail-on-failures
+python tests/runner.py --case listener_redirect_chain --browser-path "<Chrome 可执行文件路径>" --fail-on-failures
+```
+
 ## 测试分组
 
 | 分组 | 用途 |

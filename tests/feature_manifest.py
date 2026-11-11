@@ -79,6 +79,12 @@ FEATURES = [
     {"id": "ssr_site_smoke", "title": "Astro SSR fixture 完整冒烟", "case": "feature_ssr_site_smoke"},
     {"id": "ssr_marketplace_flow", "title": "SSR Marketplace 浏览到下单完整业务流", "case": "feature_ssr_marketplace_flow"},
     {"id": "ssr_social_notes_mobile", "title": "SSR 社区笔记移动端瀑布流与互动", "case": "feature_ssr_social_notes_mobile"},
+    {"id": "listener_redirect_chain_replay", "title": "可选采集重定向链：链顺序、终包与逐跳字段", "case": "feature_listener_redirect_chain"},
+    {"id": "listener_redirect_chain_final_filter", "title": "重定向链按最终跳 URL/方法/资源类型过滤", "case": "feature_listener_redirect_chain"},
+    {"id": "listener_redirect_chain_extra_info", "title": "重定向链 ExtraInfo 早到、晚到、缺席归属", "case": "feature_listener_redirect_chain"},
+    {"id": "listener_redirect_chain_silence", "title": "重定向链 wait_silent 按实际未终结请求判断", "case": "feature_listener_redirect_chain"},
+    {"id": "listener_redirect_chain_lifecycle", "title": "重定向链 stop/clear 与并发隔离", "case": "feature_listener_redirect_chain"},
+    {"id": "listener_redirect_chain_browser", "title": "真实 Chromium tab.listen/frame.listen 重定向链回归", "case": "listener_redirect_chain"},
 ]
 
 EXCLUDED = [
